@@ -25,5 +25,5 @@ ENV FLASK_ENV=development
 
 EXPOSE ${PORT}
 
-# python3 -m flask run --host=0.0.0.0 --port=45667 // cmd used
+# python3 -m flask run --host=0.0.0.0 --port=45667 // cmd used to start up flask
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]

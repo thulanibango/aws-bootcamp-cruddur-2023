@@ -24,6 +24,11 @@ docker push tula02/frontend_boot:v1
 ```
 ![push to docker hub and tag image ](images/image_detail.png)
 
+### Implementing a Health check in the docker composer file
+Health checks are meant to chek if resources are healthy. Here health checks are implemented in the docker compose file.
+The health checks are implemented on each resouce that 
+![Implementation of health checks using the docker compose file ](images/Health_check.png)
+
 ### Multi-stage building for a Dockerfile build
 
 Here i built a multi-stage for a docker build. The highlighted underlined parts show the images built normally and the one using multi-stage build. The underlined red is the originally built and the green is the multi-stage built, which shows it's advantages of speed and less space consumption. The steps to build the images are 
@@ -31,4 +36,6 @@ Here i built a multi-stage for a docker build. The highlighted underlined parts 
 docker build -t demo:small .
 ```
 ![Mult-istage build for docker ](images/multistage_docker.png)
+
+### Multi-stage building for a Dockerfile build
 

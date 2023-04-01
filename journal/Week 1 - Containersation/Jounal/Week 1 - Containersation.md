@@ -26,7 +26,7 @@ docker push tula02/frontend_boot:v1
 
 ### Implementing a Health check in the docker composer file
 Health checks are meant to chek if resources are healthy. Here health checks are implemented in the docker compose file.
-The health checks are implemented on each resouce that 
+The health checks are implemented on each container service.
 ![Implementation of health checks using the docker compose file ](images/Health_check.png)
 
 ### Multi-stage building for a Dockerfile build
@@ -37,5 +37,72 @@ docker build -t demo:small .
 ```
 ![Mult-istage build for docker ](images/multistage_docker.png)
 
-### Multi-stage building for a Dockerfile build
+### Launching EC2 instance and pulling a container to it
 
+Launching an eC2 instance  through the aws console using an admin account. 
+![Provioned the ec2 instance through console ](images/multistage_docker.png)
+
+After launching the ec2 instance, I went to the ec2 instance and connected to the ec2 instance connect. this is to have access to terminal through the browser
+
+![ec2 instance connect ](images/multistage_docker.png)
+
+I the followed the follwoing cmds from  (https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/) to successfully install docker on my ec2 instance.
+The steps are for installing docker on my ec2 instance:
+Checking pending updates
+```
+sudo yum update
+```
+Install docker
+ ```
+sudo yum install docker
+```
+Add group membership for default ec2-user so this can run all docker commands without sudo command
+ ```
+sudo yum install docker
+```
+enable docker service at AMI boot time
+````
+sudo systemctl enable docker.service
+
+````
+
+Start docker service
+
+````
+sudo systemctl start docker.service
+
+````
+
+Get docker service status on AMI instance
+
+````
+sudo systemctl status docker.service
+
+````
+![Status verification for docker ](images/multistage_docker.png)
+
+The second phase of the task involved pulling docker image from dockerhub and running it. Here are the folleing steps to that:
+
+Pull image from dockerhub
+
+````
+docker pull stacksimplify/dockerintro-springboot-helloworld-rest-api:1.0.0-RELEASE
+
+````
+![pulling image from docker ](images/multistage_docker.png)
+
+Checking image is pulled
+````
+docker images
+````
+running the docker image and accessing app
+````
+docker run --name ap -p 80:8081 -d stacksimplify/dockerintro-springboot-helloworld-rest-api:1.0.0-RELEASE
+http://localhost/hello
+````
+list running container
+````
+docker ps
+````
+
+![pulling image from docker ](images/multistage_docker.png)

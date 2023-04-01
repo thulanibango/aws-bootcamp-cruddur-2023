@@ -44,7 +44,7 @@ Launching an eC2 instance  through the aws console using an admin account.
 
 After launching the ec2 instance, I went to the ec2 instance and connected to the ec2 instance connect. this is to have access to terminal through the browser
 
-![ec2 instance connect ](images/multistage_docker.png)
+![ec2 instance connect ](images/aws.png)
 
 I the followed the follwoing cmds from  (https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/) to successfully install docker on my ec2 instance.
 The steps are for installing docker on my ec2 instance:
@@ -79,7 +79,7 @@ Get docker service status on AMI instance
 sudo systemctl status docker.service
 
 ````
-![Status verification for docker ](images/multistage_docker.png)
+![Status verification for docker ](images/verification.png)
 
 The second phase of the task involved pulling docker image and running it. Here are the folleing steps to that:
 
@@ -89,8 +89,6 @@ Pull image
 docker pull stacksimplify/dockerintro-springboot-helloworld-rest-api:1.0.0-RELEASE
 
 ````
-![pulling image from docker ](images/multistage_docker.png)
-
 Checking image is pulled
 ````
 docker images
@@ -105,4 +103,4 @@ list running container
 docker ps
 ````
 
-![pulling image from docker ](images/multistage_docker.png)
+![Docker running container on an AWS instance ](images/image.png)

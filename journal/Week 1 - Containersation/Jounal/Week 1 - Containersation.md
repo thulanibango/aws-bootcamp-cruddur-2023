@@ -44,7 +44,7 @@ Launching an eC2 instance  through the aws console using an admin account.
 
 After launching the ec2 instance, I went to the ec2 instance and connected to the ec2 instance connect. this is to have access to terminal through the browser
 
-![ec2 instance connect ](images/aws.png)
+![ec2 instance connect ](images/dockerinstance.png)
 
 I the followed the follwoing cmds from  (https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/) to successfully install docker on my ec2 instance.
 The steps are for installing docker on my ec2 instance:

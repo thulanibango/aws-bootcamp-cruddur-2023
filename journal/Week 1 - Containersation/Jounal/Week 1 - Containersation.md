@@ -81,9 +81,9 @@ sudo systemctl status docker.service
 ````
 ![Status verification for docker ](images/multistage_docker.png)
 
-The second phase of the task involved pulling docker image from dockerhub and running it. Here are the folleing steps to that:
+The second phase of the task involved pulling docker image and running it. Here are the folleing steps to that:
 
-Pull image from dockerhub
+Pull image 
 
 ````
 docker pull stacksimplify/dockerintro-springboot-helloworld-rest-api:1.0.0-RELEASE

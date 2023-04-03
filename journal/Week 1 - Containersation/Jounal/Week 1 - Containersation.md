@@ -37,6 +37,26 @@ docker build -t demo:small .
 ```
 ![Mult-istage build for docker ](images/multistage_docker.png)
 
+### Docker container security best practices
+  > Container first strategy
+  > Container security components
+  >Dockerhost and host configuration
+  Security best Practices
+  Keep host & docker updated to latest security patches
+  Docker daemon and containers should run in non-root user mode
+  Image vulnerability scanning
+  Trusting a private vs public image registry
+  No sensitive data in docker files or images
+  Use secret management services to share secrets
+  Read only file system and volume for docker
+  Separate database for long term use
+  Use Devsecops practices while building security
+  Ensure all code is tested for vulnerabilities before production use
+
+
+
+
+
 ### Launching EC2 instance and pulling a container to it
 
 Launching an eC2 instance  through the aws console using an admin account. 
